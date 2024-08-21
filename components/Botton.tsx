@@ -11,7 +11,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ bgColor, textColor, link, icon, children }) => {
   return (
-    <Link href={link} className={`w-fit inline-flex items-center px-6 py-4 border border-transparent text-base font-semibold rounded-full shadow-sm cursor-pointer ${bgColor} ${textColor}`}>
+    <Link href={link} className={`font-openSans w-fit inline-flex items-center px-6 py-4 border border-transparent text-base font-semibold rounded-full shadow-sm cursor-pointer ${bgColor} ${textColor}`}>
       {icon && <span className="mr-2">{icon}</span>}
       {children}
     </Link>
