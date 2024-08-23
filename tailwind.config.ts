@@ -16,9 +16,11 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      fontFamily:{
-        openSans: ["var(--font-open-sans)"],
-        montserrat: ["var(--font-montserrat)"],
+      fontFamily: {
+        inter: ['var(--font-inter)', 'sans-serif'],
+        montserrat: ['var(--font-montserrat)', 'sans-serif'],
+        opensans: ['var(--font-open-sans)', 'sans-serif'],
+        nunito: ['var(--font-nunito)', 'sans-serif'],
       },
       screens: {
         // "xsm": "428px",

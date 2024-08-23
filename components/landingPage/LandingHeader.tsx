@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import Button from '../Botton';
+import Button from '../Button';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 const LandingHeader = () => {

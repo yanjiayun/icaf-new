@@ -1,9 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Montserrat, Open_Sans, Nunito } from "next/font/google";
 import { sharedOpenGraph } from "./shared-metadata";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+});
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-open-sans",
+});
+const nunito = Nunito({
+  subsets: ["latin"],
+  variable: "--font-nunito",
+});
 
 export const metadata: Metadata = {
   title: "Home | ICAF",
@@ -20,11 +32,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-      </head>
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} ${montserrat.variable} ${openSans.variable} ${nunito.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
