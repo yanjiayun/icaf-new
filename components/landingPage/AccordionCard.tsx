@@ -1,56 +1,63 @@
-"use client";
-import React, { useState } from "react";
-import Image from "next/image";
+import React from "react";
+import Image, { StaticImageData } from "next/image";
 import { Down } from "../../public/landingPage/icons/Down";
 import { Up } from "../../public/landingPage/icons/Up";
 
-export const AccordionCard = (props) => {
-  const [isExpanded, SetIsExpanded] = useState(false);
-  const [item] = useState(props.datas);
+type AccordionCardProps = {
+  datas: {
+    backgroud: StaticImageData | string;
+    header: string;
+    element: string;
+  };
+  isExpanded: boolean;
+  onClick: () => void;
+};
 
-  const baseHeight = parseInt(item.height.replace("px", ""));
-  const expandedHeight = isExpanded ? baseHeight + 40 : baseHeight;
-
+export const AccordionCard: React.FC<AccordionCardProps> = ({ datas, isExpanded, onClick }) => {
   return (
     <div
-      onClick={() => SetIsExpanded(!isExpanded)}
-      className="h-fit p-2 relative rounded-2xl cursor-pointer"
-      // className="py-6 px-4 relative rounded-2xl cursor-pointer bg-gray-800 transition-all duration-500 ease-in-out"
-      style={{ height: `${expandedHeight}px` }}
+      onClick={onClick}
+      className={`relative rounded-2xl cursor-pointer transition-all duration-700 ease-in-out w-full h-[180px] sm:h-[180px] lg:h-[220px] 2xl:h-[280px] ${isExpanded ? 'h-[230px] sm:h-[230px] lg:h-[260px] 2xl:h-[300px]' : ''}`}
     >
       <Image
-        src={item.backgroud}
-        width={390}
-        height={271}
-        className="relative z-0 w-full h-full object-contain object-center "
+        src={datas.backgroud}
+        layout="fill" 
+        objectFit="cover"  
+        objectPosition="center"  
+        className="relative z-0 w-full h-full rounded-2xl"
         alt="image"
       />
+      
+      {isExpanded && (
+        <div className="absolute inset-0 bg-black opacity-40 rounded-2xl z-10"></div>
+      )}
       <div
-        className={`items-center transition-all ease-in-out duration-500 absolute z-30 w-full 
+        className={`items-center transition-all ease-in-out duration-700 absolute z-30 w-full 
           ${isExpanded ? "top-1/4" : "top-1/2 transform -translate-y-1/2"}`}
       >
         <div className="text-white text-base xl:text-xl 2xl:text-2xl font-semibold font-montserrat text-center">
-          {item.header}
+          {datas.header}
         </div>
       </div>
       <div
-        className={`transition-all ease-in-out duration-500 absolute z-30 w-full text-center 
-          ${isExpanded ? "visible top-1/2 transform -translate-y-1/2" : "invisible"}`}
+        className={`transition-all ease-in-out duration-700 absolute z-30 w-full text-left
+          ${isExpanded ? "mt-4 xl:mt-6 visible top-1/2 transform -translate-y-1/2 opacity-100" : "visible top-2/3 transform translate-y-6 opacity-0"}`}
       >
-        <p className="px-2 text-white text-base xl:text-xl 2xl:text-2xl font-light font-openSans">
-          {item.element}
+        <p className="px-2 text-white text-base font-light lg:font-normal xl:text-xl xl:font-semibold font-openSans">
+          {datas.element}
         </p>
       </div>
+      
       <div
-        className={`absolute bottom-10 left-1/2 transform -translate-x-1/2 ${isExpanded ? "hidden" : ""}`}
+        className={`z-50 absolute bottom-10 left-1/2 transform -translate-x-1/2 ${isExpanded ? "hidden" : ""}`}
       >
         <Down />
       </div>
       <div
-        className={`absolute bottom-10 left-1/2 transform -translate-x-1/2 ${isExpanded ? "" : "hidden"}`}
+        className={`z-50 absolute bottom-10 left-1/2 transform -translate-x-1/2 ${isExpanded ? "" : "hidden"}`}
       >
         <Up />
       </div>
     </div>
   );
-};  
+};

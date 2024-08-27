@@ -15,7 +15,6 @@
     "@fontsource/open-sans": "^5.0.28",
     "@mui/icons-material": "^5.16.6",
     "@mui/material": "^5.16.6",
-    "@next/font": "^14.2.6",
     "@types/marked": "^6.0.0",
     "marked": "^13.0.2",
     "next": "14.2.5",

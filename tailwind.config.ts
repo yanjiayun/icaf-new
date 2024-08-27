@@ -19,7 +19,7 @@ const config: Config = {
       fontFamily: {
         inter: ['var(--font-inter)', 'sans-serif'],
         montserrat: ['var(--font-montserrat)', 'sans-serif'],
-        opensans: ['var(--font-open-sans)', 'sans-serif'],
+        openSans: ['var(--font-open-sans)', 'sans-serif'],
         nunito: ['var(--font-nunito)', 'sans-serif'],
       },
       screens: {
