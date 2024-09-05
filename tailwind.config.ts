@@ -23,7 +23,7 @@ const config: Config = {
         nunito: ['var(--font-nunito)', 'sans-serif'],
       },
       screens: {
-        // "xsm": "428px",
+        "xsm": "468px",
       },
       spacing:{
         "33%": "33%",

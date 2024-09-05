@@ -5,8 +5,8 @@ const WhatWeDo = () => {
 
   return (
     <section className='m-auto max-w-screen-2xl px-8 md:px-12 lg:px-16 xl:px-20'>
-      <h1 className='font-extrabold font-montserrat text-2xl lg:text-4xl text-center text-black'>What we do</h1>
-      <p className='mt-10 text-xl font-normal text-black font-openSans text-left lg:text-center'>ICAF empowers children by seeding their imagination, cultivating creativity, and growing mutual empathy as building blocks for a more peaceful, prosperous, and sustainable future.</p>
+      <h1 className='font-extrabold font-montserrat text-[32px] lg:text-[40px] text-center text-black'>What we do</h1>
+      <p className='mt-10 text-base md:text-xl font-normal text-black font-openSans text-left lg:text-center'>ICAF empowers children by seeding their imagination, cultivating creativity, and growing mutual empathy as building blocks for a more peaceful, prosperous, and sustainable future.</p>
       <div className='block lg:hidden mt-10 font-montserrat text-black font-bold text-2xl text-left'>
         <p>We focus on what's important for schoolchildren: How they view themselves.</p>
         <p>Our Holistic identity development has two phases:</p>
