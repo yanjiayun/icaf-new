@@ -14,7 +14,7 @@ const WhyICAF = () => {
           <div className='col-span-2 lg:col-span-1'>
             <div className='flex col-span-1'>
               <AdsClickIcon style={{ color: "#2057CC" }}/>
-              <h2 className="ml-5 text-main-blue text-2xl lg:text-4xl font-semibold font-montserrat">Mission</h2>
+              <h2 className="ml-5 text-blue text-2xl lg:text-4xl font-semibold font-montserrat">Mission</h2>
             </div>
             <p className="mt-4 lg:ml-10 col-span-1 lg:col-span-2 text-base text-black font-normal font-openSans">To seed students' imagination, cultivate their creativity, and grow mutual empathy through the power of art. </p> 
           </div>
@@ -48,7 +48,7 @@ const WhyICAF = () => {
             <div className='mx-auto w-[380px] lg:w-full mt-12 grid grid-cols-1 lg:grid-cols-3'>
               <div className='flex col-span-1'>
                 <AdsClickIcon style={{ color: "#2057CC" }}/>
-                <h2 className="ml-5 text-main-blue text-2xl lg:text-4xl font-semibold font-montserrat">Mission</h2>
+                <h2 className="ml-5 text-blue text-2xl lg:text-4xl font-semibold font-montserrat">Mission</h2>
               </div>
               <p className="mt-4 lg:mt-0 lg:ml-10 col-span-1 lg:col-span-2 text-base text-black font-normal font-openSans">To seed students' imagination, cultivate their creativity, and grow mutual empathy through the power of art. </p>
               <div className='mt-10 flex col-span-1'>
@@ -63,13 +63,13 @@ const WhyICAF = () => {
           <div className="relative col-span-2 lg:col-span-1 h-80">
             <div className=" flex flex-col items-start">
               <div className="mx-auto mt-10 relative">
-                <div className="z-10 rounded-t-full rounded-b-full bg-gradient-to-b from-main-red to-main-blue absolute left-3.5 top-0 h-full w-1 bg-red-500"></div>
+                <div className="z-10 rounded-t-full rounded-b-full bg-gradient-to-b from-main-red to-blue absolute left-3.5 top-0 h-full w-1 bg-red-500"></div>
                 <div className="mt-4 z-50 flex items-center mb-8">
                   <div className="z-50 h-8 w-8 rounded-full bg-main-red"></div>
                   <h2 className="ml-8 text-2xl font-semibold font-montserrat">Social and Cultural Impact</h2>
                 </div>
                 <div className="z-50 flex items-center mb-8">
-                  <div className="z-50 h-8 w-8 rounded-full bg-main-blue"></div>
+                  <div className="z-50 h-8 w-8 rounded-full bg-blue"></div>
                   <div className="ml-8">
                     <h2 className="text-2xl font-semibold font-montserrat">115 Countries Reached</h2>
                     <p className="text-base text-black font-normal font-openSans">to make students creative and empathetic</p>
@@ -83,7 +83,7 @@ const WhyICAF = () => {
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="z-50 mb-4 h-8 w-8 rounded-full bg-main-blue"></div>
+                  <div className="z-50 mb-4 h-8 w-8 rounded-full bg-blue"></div>
                   <div className="ml-8">
                     <h2 className="text-2xl font-semibold font-montserrat">2 Million Kids Worldwide</h2>
                     <p className="text-base text-black font-normal font-openSans">produced original works for ICAF</p>

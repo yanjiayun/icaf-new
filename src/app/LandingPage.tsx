@@ -5,6 +5,7 @@ import WhatWeDo from "../../components/landingPage/WhatWeDo";
 import Activities from "../../components/landingPage/Activities";
 import SpecialProjects from "../../components/landingPage/SpecialProjects";
 import Bottom from "../../components/landingPage/Bottom";
+import Educational from "../../components/landingPage/Educational";
 
 const LandingPage = () => {
   return (
@@ -13,6 +14,7 @@ const LandingPage = () => {
       <WhyICAF />
       <WhatWeDo />
       <Activities />
+      <Educational />
       <SpecialProjects />
       <Bottom />
     </>

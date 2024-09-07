@@ -31,10 +31,11 @@ const config: Config = {
       colors:{
         "black": "#121212",
         "white": "#FFFFFF",
-        "yellow":"#FFBC42",
+        "yellow": "#FFBC42",
+        "red": "#DA1E40",
+        "blue": "#2057CC",
         "navy-blue":"#134380",
         "main-red": "#DA1E40",
-        "main-blue": "#2057CC",
       },
     },
   },

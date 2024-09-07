@@ -21,9 +21,9 @@ export const AccordionCard: React.FC<AccordionCardProps> = ({ datas, isExpanded,
     >
       <Image
         src={datas.backgroud}
-        layout="fill" 
-        objectFit="cover"  
-        objectPosition="center"  
+        fill
+        style={{ objectFit: "cover", objectPosition: "center" }}  
+        sizes="(max-width: 1024px) 50vw, (max-width: 1536px) 25vw"
         className="relative z-0 w-full h-full rounded-2xl"
         alt="image"
       />
