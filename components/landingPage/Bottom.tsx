@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Button from '../Button';
 import a from '../../public/landingPage/a.jpg';
 import b from '../../public/landingPage/b.jpg';
@@ -11,18 +11,47 @@ import g from '../../public/landingPage/g.jpg';
 import h from '../../public/landingPage/h.jpg';
 import i from '../../public/landingPage/i.jpg';
 import j from '../../public/landingPage/j.jpg';
-
 import Image from "next/image";
 
 const Bottom = () => {
-
   const images = [a, b, c, d, e, f, g, h, i, j];
+  const scrollRef = useRef<HTMLDivElement>(null); // Ref for the scrollable container
+  const [isPaused, setIsPaused] = useState(false); // Manage pause state
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+
+    const scrollImages = () => {
+      if (scrollContainer && !isPaused) {
+        scrollContainer.scrollLeft += 2; // Adjust this value for smoother scrolling
+        
+        // If the container has scrolled to the end, reset to the start
+        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+          scrollContainer.scrollLeft = 0;
+        }
+      }
+    };
+
+    // Set an interval to scroll images every 20ms for smoother scrolling
+    const scrollInterval = setInterval(scrollImages, 20);
+
+    // Cleanup the interval on component unmount
+    return () => clearInterval(scrollInterval);
+  }, [isPaused]);
+
+  // Pause the scrolling when mouse enters the container
+  const handleMouseEnter = () => setIsPaused(true);
+
+  // Resume scrolling when mouse leaves the container
+  const handleMouseLeave = () => setIsPaused(false);
 
   return (
-    <section className='relative z-50 m-auto max-w-screen-2xl px-8 md:px-12 lg:px-16 xl:px-20'>
-      <div className='rounded-3xl bg-blue bg-opacity-10'>
-        <h2 className='ml-12 pt-28 font-montserrat font-semibold text-2xl text-left w-full md:w-3/4'>Your donation today will cultivate children's creativity and grow their mutual empathy for shared prosperity and “a more perfect union.”</h2>
-        <div className='ml-12 mt-12 pb-28 grid grid-cols-2 gap-x-5 sm:w-2/3 md:w-1/2 lg:w-1/3 2xl:w-1/4'>
+    <section className='relative z-30 m-auto max-w-screen-2xl px-8 md:px-12 lg:px-16 xl:px-20'>
+      <div className='px-12 rounded-3xl bg-blue bg-opacity-10'>
+        <h2 className='pt-28 font-montserrat font-semibold text-2xl text-left w-full md:w-3/4'>
+          Your donation today will cultivate children's creativity and grow their mutual empathy for shared prosperity and “a more perfect union.”
+        </h2>
+        <div className='mt-12 pb-28 grid grid-cols-2 gap-x-5 sm:w-2/3 md:w-1/2 lg:w-1/3 2xl:w-1/4'>
           <Button
             bgColor="bg-yellow"
             textColor="text-black w-full"
@@ -39,22 +68,27 @@ const Bottom = () => {
           </Button>
         </div>
       </div>
-      <div className="py-32 z-20 flex flex-row overflow-x-auto m-auto whitespace-nowrap px-4 mb-10 gap-x-4 scrollbar-hide">
-        {/* <Image src={a} alt="" className="w-72 xl:w-96 h-44 md:h-48 lg:h-52 xl:h-64 z-20 object-cover object-center rounded-xl"/> */}
-          {images.map((src, index) => (
-            <Image
-              key={index}
-              src={src}
-              alt={`image-${index}`} 
-              className="w-72 xl:w-96 h-44 md:h-48 lg:h-52 xl:h-64 z-20 object-cover object-center rounded-xl"
-            />
-          ))}
+
+      <div 
+        ref={scrollRef} 
+        className="py-32 z-20 flex flex-row overflow-x-auto m-auto whitespace-nowrap px-4 gap-x-4 scrollbar-hide" 
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        {images.map((src, index) => (
+          <Image
+            key={index}
+            src={src}
+            alt={`image-${index}`} 
+            className="w-72 xl:w-96 h-44 md:h-48 lg:h-52 xl:h-64 z-20 object-cover object-center rounded-xl"
+          />
+        ))}
       </div>
-      
 
-      <img src="/landingPage/RedAndBlueFirework.png" className='z-10 absolute right-0 -top-[50px] xsm:-top-[100px] md:top-64 lg:top-56 lg:right-2 xl:top-36 max-w-[300px] w-1/3 sm:w-1/4 2xl:w-1/5'/>
-
-      
+      <img 
+        src="/landingPage/RedAndBlueFirework.png" 
+        className='z-10 absolute right-0 -top-[50px] xsm:-top-[100px] md:top-64 lg:top-56 lg:right-2 xl:top-36 max-w-[300px] w-1/3 sm:w-1/4 2xl:w-1/5' 
+      />
     </section>
   );
 };
