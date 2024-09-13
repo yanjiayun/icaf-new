@@ -5,9 +5,9 @@ import TheArtsOlympiad from '../../public/landingPage/TheArtsOlympiad.png';
 import WorldChildrenFestival from '../../public/landingPage/WorldChildrenFestival.png';
 import PeacethroughArt from '../../public/landingPage/PeacethroughArt.png';
 import ChildrenPanelConferences from '../../public/landingPage/ChildrenPanelConferences.png';
-import ChildArtMagazine from '../../public/landingPage/ChildArtMagazine.png';
+import ChildArtMagazine from '../../public/landingPage/ChildArtMagazine.jpg';
 import HealingArts from '../../public/landingPage/HealingArts.png';
-import WorldChildrensAward from '../../public/landingPage/WorldChildrensAward.png';
+import WorldChildrensAward from '../../public/landingPage/WorldChildrensAward.jpg';
 import ResearchAndNewLearning from '../../public/landingPage/ResearchAndNewLearning.png';
 
 const Activities = () => {
@@ -31,12 +31,12 @@ const Activities = () => {
     },
     {
       backgroud: ChildrenPanelConferences,
-      header: "Children's Panel at Conferences",
-      element: "Giving voice to children and educating adults",
+      header: "Youth Panels at Conferences",
+      element: "Giving voice to children and galvanizing adults",
     },
     {
       backgroud: ChildArtMagazine,
-      header: "Child Art Magazine",
+      header: "Quarterly Magazine",
       element: "Arts learning and global competency distributed quarterly",
     },
     {

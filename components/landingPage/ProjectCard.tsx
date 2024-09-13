@@ -29,7 +29,7 @@ export const ProjectCard: React.FC<CustomCardProps> = ({ background, title, elem
           <h3 className="text-center text-xl font-semibold font-openSans">{title}</h3>
           <p className="mt-4 text-base font-light font-openSans">{element}</p>
         </div>
-        <a href={link}>
+        <a href={link} target="_blank">
           <div className="mt-8 inline-flex items-center justify-center text-base font-normal">
             Go to Website <span className="ml-2 text-black"><NorthEastIcon /></span>
           </div>
