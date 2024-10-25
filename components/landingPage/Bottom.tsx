@@ -52,7 +52,7 @@ const Bottom = () => {
     <section className='relative z-30 m-auto max-w-screen-2xl px-8 md:px-12 lg:px-16 xl:px-20'>
       <div className='px-12 rounded-3xl bg-blue bg-opacity-10'>
         <h2 className='pt-28 font-montserrat font-semibold text-2xl text-left w-full md:w-3/4'>
-          Help bring the arts to schools and shape a more creative and empathic future with your donation today. 
+          Help bring the arts to schools and shape a more creative and empathic future with your tax-deductible contribution today. 
         </h2>
         {/* <div className='mt-12 pb-28 grid grid-cols-2 gap-x-5 sm:w-2/3 md:w-1/2 lg:w-1/3 2xl:w-1/4'> */}
         <div className='mt-4 pb-28 gap-x-5 sm:w-2/3 md:w-1/2 lg:w-1/3 2xl:w-1/4'>
